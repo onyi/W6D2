@@ -18,9 +18,12 @@ class View {
            let $h2 = $("<h2>")
            $h2.addClass('winner')
            $h2.append(`${this.game.currentPlayer} has won!`);
-           console.log($h2);
            this.$el.append($h2);
+          //  console.log(this.game.board.winner());
+          $('.square').css('background-color', 'white');
+          $(`.${this.game.currentPlayer}`).css('background-color', 'green');
          }
+         
        }catch(err) {
          alert(err.message);
        }
